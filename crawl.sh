@@ -1,5 +1,5 @@
 #!/bin/bash
-#parmeters for the RIS API
+#parameters for the RIS API
 
 #parsing the law.html from RIS
 function save_law {
@@ -11,7 +11,7 @@ function save_law {
   echo 'save data to '$temp_law_filename
 
   echo 'convert html to text'
-  maxWidth=$(echo "2^(32-1)-1" | bc) #max with of cli for the html2text converter
+  maxWidth=$(echo "2^(32-1)-1" | bc) #max width of cli for the html2text converter
   html2text -width $maxWidth -o $temp_law_filename".txt" $temp_law_filename".html"
 
   echo -e 'done '$temp_law_filename
